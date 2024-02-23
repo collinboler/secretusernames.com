@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <title>Secret Username Generator</title>
+    <script>
+        function copyToClipboard(text, buttonId) {
+            navigator.clipboard.writeText(text).then(() => {
+                const button = document.getElementById(buttonId);
+                button.textContent = 'Copied!';
+                button.style.backgroundColor = '#4CAF50'; // Change color to indicate success
+                setTimeout(() => {
+                    button.style.backgroundColor = '#007BFF'; // Change back to blue
+                    button.textContent = button.getAttribute('data-text'); // Reset button text based on data-text attribute
+                }, 1000); // Revert after 1 second
+            });
+        }
+    </script>
+    <style>
+        .buttonContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sideBySideButtons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .followButton {
+            padding: 8px 16px;
+            color: white;
+            border: none;
+            text-align: center;
+            cursor: pointer;
+            font-size: medium;
+        }
+
+        .fuchsiaButton {
+            background-color: fuchsia;
+        }
+
+        .tealButton {
+            background-color: teal;
+        }
+
+        .copyButton {
+            background-color: #007BFF; /* Blue */
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            text-align: center;
+            cursor: pointer;
+            font-size: medium;
+        }
+
+        .discordButton {
+            background-color: #7289d9;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            text-align: center;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+            font-size: medium;
+        }
+
+        h2 {
+            font-size: 4em;
+            font-weight: bold;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>Secret Username Generator</strong></li>
+        </ul>
+        <ul>
+            <li><a href="https://discord.gg/fzgfJAWhxz" target="_blank" class="discordButton">Join Discord</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <div class="grid">
+            <section>
+                <hgroup>
+                    <h2>Welcome to the Secret Username Generator</h2>
+                </hgroup>
+                <p>Use the buttons below to copy to clipboard</p>
+                <div class="sideBySideButtons">
+                    <button class="followButton fuchsiaButton" onclick="window.location.href='https://www.tiktok.com/@fuchsiawtf?_t=8k5f1oNU907&_r=1'">Follow @fuchsiawtf</button>
+                    <button class="followButton tealButton" onclick="window.location.href='https://www.tiktok.com/@tealwtf?_t=8k5fC6gDSFa&_r=1'">Follow @tealwtf</button>
+                </div>
+                <div class="buttonContainer">
+                    <button id="copyButton1" class="copyButton" data-text="Invisible" onclick="copyToClipboard('⠀ ⠀ ⠀ ⠀ ⠀', 'copyButton1')">Invisible</button>
+                    <button id="copyButton2" class="copyButton" data-text="   @⃝꙰⃝꙰⃝꙰⃝꙰⃝꙰⃝꙰⃝꙰⃝꙰⃝꙰⃝" onclick="copyToClipboard('   @⃝꙰⃝꙰⃝꙰⃝꙰⃝꙰⃝꙰⃝꙰⃝꙰⃝꙰⃝', 'copyButton2')">   @⃝꙰⃝꙰⃝꙰⃝꙰⃝꙰⃝꙰⃝꙰⃝꙰⃝꙰⃝</button>
+                    <button id="newButton3" class="copyButton" data-text="𓆉" onclick="copyToClipboard('𓆉', 'newButton3')">𓆉</button>
+                    <button id="newButton4" class="copyButton" data-text="𓆝 𓆟 𓆞 𓆝 𓆟" onclick="copyToClipboard('𓆝 𓆟 𓆞 𓆝 𓆟', 'newButton4')">𓆝 𓆟 𓆞 𓆝 𓆟</button>
+                    <button id="newButton5" class="copyButton" data-text="𓆈" onclick="copyToClipboard('𓆈', 'newButton5')">𓆈</button>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="container">
+    </footer>
+</body>
+</html>
